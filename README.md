@@ -9,3 +9,8 @@ NIM   : 312010278
 Soal UAS diantaranya;
 
 ![screen 1](/gambar/screen1.png)
+
+hasil package
+
+ ![screen 2](/gambar/screen2.png)
+

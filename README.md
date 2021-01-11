@@ -167,3 +167,142 @@ untuk menambahkan data.
  
   ![screen 4](/gambar/screen4.png)
 
+
+Kedua untuk menghasilkan modul Ubah Data kamu perlu memasukan syntax dibawah ini.
+
+
+ elif c.lower() == 'u':
+        u = open('database.txt','r').read().splitlines()
+        target = input(' Masukan Nama : ')
+        nm = []
+        for l in u:
+            if l == '':
+                pass
+            else:
+                l1 = l.replace('Nama : ','').replace('Nim : ','').replace('Tugas : ','').replace('UTS : ','').replace('UAS : ','').replace('Akhir : ','')
+                na,ni,tu,uts,uas,akhir = l1.strip().split('|')
+                if na == target:
+                    P(' Mengedit Data %s'%(target))
+                    while (True):
+                        nama = input(" Nama : ")
+                        if nama == '':
+                            P(' Masukan dengan Nama Dengan Benar')
+                        else:
+                            break
+                    while (True):
+                        try:
+                            nim  = int(input(" NIM  : "))
+                            if nim == '':
+                                P(' Masukan Nim dengan Angka')
+                        except ValueError:
+                            P(' Masukan Nim dengan Angka')
+                        else:
+                            break
+                    while (True):
+                        try:
+                            tugas  = int(input(" TUGAS  : "))
+                            if tugas == '':
+                                P(' Masukan TUGAS dengan Angka')
+                        except ValueError:
+                            P(' Masukan TUGAS dengan Angka')
+                        else:
+                            break
+                    while (True):
+                        try:
+                            uts  = int(input(" UTS  : "))
+                            if uts == '':
+                                P(' Masukan UTS dengan Angka')
+                        except ValueError:
+                            P(' Masukan UTS dengan Angka')
+                        else:
+                            break
+                    while (True):
+                        try:
+                            uas  = int(input(" UAS  : "))
+                            if uas == '':
+                                P(' Masukan UAS dengan Angka')
+                        except ValueError:
+                            P(' Masukan UAS dengan Angka')
+                        else:
+                            break
+                    akhir = round((float(tugas) * 0.3)+(float(uts) * 0.35)+(float(uas) * 0.35),2)
+                    edit  =('Nama : '+nama+'|Nim : '+str(nim)+'|Tugas : '+str(tugas)+'|UTS : '+str(uts)+'|UAS : '+str(uas)+"|Akhir : "+str(akhir)+'\n')
+                    nm.append(edit+'\n')
+                else:
+                    nm.append(str(l)+'\n')
+        new = open('database.txt','w')
+        new.write(str(nm))
+        new.close()
+        new = open('database.txt','r').read().splitlines()
+        new1 = open('database.txt','w')
+        new1.close()
+        new2 = open('database.txt','a')
+        for i in new:
+            i2 = i.replace("['","").replace("\\n', '", "\n").replace("']","").replace("\\n","\n")
+            new2.write(i2+'\n')
+        new2.close()
+		
+		
+Jadi kesimpulannya jika kalian menggunakan semua syntax yang saya tunjukan diawal dan memasukan 'U' pada
+kolom yang tersedia dan kalian run, maka akan mendapat output seperti dibawah ini, yang dimana itu adalah hasil
+untuk mengubah data.
+
+
+![screen 5](/gambar/screen5.png)
+
+
+Ketiga untuk menghasilkan modul Hapus Data kamu perlu memasukan syntax dibawah ini.
+
+ elif c.lower() == 'h':
+        u = open('database.txt','r').read().splitlines()
+        target = input(' Masukan Nama : ')
+        nm = []
+        for l in u:
+            if l == '':
+                pass
+            else:
+                l1 = l.replace('Nama : ','').replace('Nim : ','').replace('Tugas : ','').replace('UTS : ','').replace('UAS : ','').replace('Akhir : ','')
+                na,ni,tu,uts,uas,akhir = l1.strip().split('|')
+                if str(na) == str(target):
+                    P('BERHASIL MENGHAPUS Data %s'%(target))
+                    pass
+                else:
+                    nm.append(str(l)+'\n')
+        new = open('database.txt','w')
+        new.write(str(nm))
+        new.close()
+        new = open('database.txt','r').read().splitlines()
+        new1 = open('database.txt','w')
+        new1.close()
+        new2 = open('database.txt','a')
+        for i in new:
+            i2 = i.replace("['","").replace("\\n', '", "\n").replace("']","").replace("\\n",'')
+            new2.write(i2)
+        new2.close()
+		
+
+Jadi kesimpulannya jika kalian menggunakan semua syntax yang saya tunjukan diawal dan memasukan 'H' pada
+kolom yang tersedia dan kalian run, maka akan mendapat output seperti dibawah ini, yang dimana itu adalah hasil
+untuk menghapus data.
+
+![screen 6](/gambar/screen6.png)
+
+
+SOAL 2 (View_Nilai)
+
+Untuk menjawab soal nomer 2, kalian hanya perlu mengetikan huruf "L" pada kolom yang di sediakan untuk melihat
+hasil pencarian ataupun daftar nilai. Maka nanti akan mendapatkan hasil output seperti gambar dibawah ini.
+
+
+![screen 7](/gambar/screen7.png)
+
+
+SOAL 3 (Input_Nilai)
+
+Pada soal ke-3 ini, jika kalian ingin menginput suatu data yaitu sama halnya seperti kalian memasukan huruf "T"
+untuk menambahkan suatu data. Dan hasil output yang dihasilkan pun sama yaitu sebagai berikut.
+
+
+![screen 8](/gambar/screen8.png)
+
+

@@ -155,3 +155,15 @@ memasukan syntax dibawah ini.
         akhir = round((float(tugas) * 0.3)+(float(uts) * 0.35)+(float(uas) * 0.35),2)
         i.write('\nNama : '+nama+'|Nim : '+str(nim)+'|Tugas : '+str(tugas)+'|UTS : '+str(uts)+'|UAS : '+str(uas)+"|Akhir : "+str(akhir)+'\n')
         i.close()
+		
+		
+Jadi kesimpulannya jika kalian menggunakan semua syntax yang saya tunjukan diawal dan memasukan 'T' pada
+kolom yang tersedia dan kalian run, maka akan mendapat output seperti dibawah ini, yang dimana itu adalah hasil
+untuk menambahkan data.
+
+
+ ![screen 3](/gambar/screen3.png)
+ 
+ 
+  ![screen 4](/gambar/screen4.png)
+

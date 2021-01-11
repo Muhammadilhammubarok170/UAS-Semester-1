@@ -21,3 +21,6 @@ Pada soal pertama, dibawah ini saya telah menyantumkan beberapa syntax yang nant
 modul dari package Daftar_Nilai yang diantaranya adalah (Tambah Data, Ubah Data, Hapus Data, Dan Cari Data)
 
 
+P = print
+while True:
+    P("")
